@@ -1,6 +1,5 @@
 import 'package:booklist/database/database.dart';
 import 'package:booklist/models/book.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
 
 class BookDao {
@@ -25,7 +24,7 @@ class BookDao {
     await db.delete(
       _tableName,
       where: whereQuery,
-      whereArgs: [_id],
+      whereArgs: [id],
     );
   }
 
